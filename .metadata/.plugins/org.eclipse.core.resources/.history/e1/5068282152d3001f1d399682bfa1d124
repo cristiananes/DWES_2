@@ -1,0 +1,17 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.repository.AstronautaRepository;
+
+@Service
+public class AstronautaService {
+	
+	@Autowired
+	AstronautaRepository astronautaRepository;
+	
+	private int tamanio =10;
+	public 
+	
+}

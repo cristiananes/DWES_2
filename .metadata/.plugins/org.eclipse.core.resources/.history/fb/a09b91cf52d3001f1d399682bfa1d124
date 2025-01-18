@@ -1,0 +1,52 @@
+package com.example.demo.controladores;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.demo.entity.Astronauta;
+import com.example.demo.repository.AstronautaRepository;
+
+
+@Controller
+public class AstronautaController {
+
+	@Autowired
+	AstronautaRepository astronautaRepository;
+	@GetMapping("/astronauta/{id}")
+	public ModelAndView getAstronauta(@PathVariable Long id) {
+		
+		ModelAndView salida = new ModelAndView("astronauta");
+		Optional<Astronauta> astronautaOptional = astronautaRepository.findById(id);
+		if (astronautaOptional.isPresent()) {
+			salida.addObject("astronauta", astronautaOptional.get());
+		}
+		return salida;
+	}
+	
+	@GetMapping("/astronauta")
+	public ModelAndView getTodosAstronautas() {
+		ModelAndView salida = new ModelAndView("astronautas");
+		Iterable<Astronauta> astronautaIterable = astronautaRepository.findAll();	
+		salida.addObject("astronautas", astronautaIterable);
+		return salida;
+	}
+	//la siguiente ruta tiene que eliminar un astronauta y devolverte a la lista de astronautas
+	
+	@GetMapping("/astronauta/eliminar/{id}")
+	public ModelAndView eliminarAstronauta(@PathVariable Long id) {
+		ModelAndView salida = new ModelAndView("redirect:/astronauta");
+		try {
+			astronautaRepository.deleteById(id);
+		} catch (Exception e) {
+		}
+
+		return salida;
+	}
+	
+	
+}

@@ -1,0 +1,46 @@
+package com.example.demo.controladores;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Astronauta;
+import com.example.demo.repository.AstronautaRepository;
+
+import jakarta.servlet.http.HttpServletResponse;
+
+@RestController
+public class AstronautaRestController {
+
+	@Autowired
+	AstronautaRepository astronautaRepository;
+
+	    @GetMapping("/astronauta-csv")
+	    public void exportarCSV(HttpServletResponse response) throws IOException {
+	        // Configurar la respuesta HTTP para la descarga
+	        response.setContentType("text/csv");
+	        response.setHeader("Content-Disposition", "attachment; filename=\"astronautas.csv\"");
+
+	        // Obtener los datos
+	        Iterable<Astronauta> astronautas = astronautaRepository.findAll();
+
+	        // Escribir los datos en el CSV
+	        try (PrintWriter writer = response.getWriter()) {
+	            // Cabeceras del CSV
+	            writer.println("ID,Nombre,Edad");
+
+	            // Datos de los astronautas
+	            for (Astronauta astronauta : astronautas) {
+	                writer.println(String.format("%d,%s,%d",
+	                        astronauta.getId(),
+	                        astronauta.getNombre(),
+	                        astronauta.getEdad()));
+	            }
+	        }
+	    }
+	}
+}
