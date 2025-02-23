@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Listado de Productos</title>
+  <!-- Incluimos Bootstrap desde CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container">
+  <h1 class="mt-5">Listado de Productos</h1>
+
+  <!-- Tabla de productos -->
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>
+          Nombre
+          <!-- Enlaces para ordenar por nombre -->
+          <a th:href="@{/productos(orden='nombre,asc')}" class="btn btn-sm btn-link">↑</a>
+          <a th:href="@{/productos(orden='nombre,desc')}" class="btn btn-sm btn-link">↓</a>
+        </th>
+        <th>
+          Precio
+          <!-- Enlaces para ordenar por precio -->
+          <a th:href="@{/productos(orden='precio,asc')}" class="btn btn-sm btn-link">↑</a>
+          <a th:href="@{/productos(orden='precio,desc')}" class="btn btn-sm btn-link">↓</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="producto : ${productosPage.content}">
+        <td th:text="${producto.id}">1</td>
+        <td th:text="${producto.nombre}">Nombre</td>
+        <td th:text="${producto.precio}">Precio</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Paginación -->
+  <nav>
+    <ul class="pagination">
+      <!-- Botón anterior -->
+      <li class="page-item" th:classappend="${productosPage.first} ? 'disabled'">
+        <a class="page-link" th:href="@{/productos(page=${productosPage.number - 1}, orden=${orden})}" aria-label="Anterior">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <!-- Números de página -->
+      <li class="page-item" th:each="i : ${#numbers.sequence(0, productosPage.totalPages - 1)}"
+          th:classappend="${productosPage.number == i} ? 'active'">
+        <a class="page-link" th:href="@{/productos(page=${i}, orden=${orden})}" th:text="${i + 1}">1</a>
+      </li>
+      <!-- Botón siguiente -->
+      <li class="page-item" th:classappend="${productosPage.last} ? 'disabled'">
+        <a class="page-link" th:href="@{/productos(page=${productosPage.number + 1}, orden=${orden})}" aria-label="Siguiente">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Scripts de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
