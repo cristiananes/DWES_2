@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+	<!-- Insertar las librerías comunes -->
+	    <div th:replace="~{fragmentos/librerias :: librerias}"></div></head>
+<body>
+<div class="container mt-4">
+	<div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+    <h1 class="mb-4" th:text="${user.usuario} != null ? 'Editar Usuario' : 'Agregar Usuario'">
+        Formulario de Usuario
+    </h1>
+    <!-- Se utiliza th:object para ligar el formulario con el objeto User -->
+    <form th:action="@{/user/saveuser}" th:object="${user}" method="post">
+       
+        <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input type="text" id="usuario" class="form-control" th:field="*{usuario}"
+                   placeholder="Ingrese el usuario" required>
+        </div>
+        <div class="mb-3">
+            <label for="contrasenia" class="form-label">Contraseña</label>
+            <input type="password" id="contrasenia" class="form-control" th:field="*{contrasenia}"
+                   placeholder="Ingrese la contraseña" required>
+        </div>
+        <div class="mb-3">
+            <label for="nombreLargo" class="form-label">Nombre Completo</label>
+            <input type="text" id="nombreLargo" class="form-control" th:field="*{nombreLargo}"
+                   placeholder="Ingrese el nombre completo" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a href="/user" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+</body>
+</html>

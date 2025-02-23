@@ -15,10 +15,12 @@ public class AstronautaService {
 	@Autowired
 	AstronautaRepository astronautaRepository;
 	
-	private final int TAMANIO =10;
+	private final int TAMANIO =5;
 	public Page<Astronauta> obtenerAstronautasPaginados(int pagina){
 		Pageable pageable = PageRequest.of(pagina, TAMANIO);
 		return astronautaRepository.findAll(pageable);
 	}
+	
+	
 	
 }

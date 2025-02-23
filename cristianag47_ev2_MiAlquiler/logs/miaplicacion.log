@@ -1,0 +1,17 @@
+2025-02-09 11:28:14 [INFO] Starting Cristianag47Ev2MiAlquilerApplication using Java 17.0.8.1 with PID 16200 (C:\Users\cristian\Documents\Workspace_2.0\cristianag47_ev2_MiAlquiler\target\classes started by cristian in C:\Users\cristian\Documents\Workspace_2.0\cristianag47_ev2_MiAlquiler)
+2025-02-09 11:28:14 [INFO] No active profile set, falling back to 1 default profile: "default"
+2025-02-09 11:28:14 [WARN] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-09 11:28:14 [INFO] Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-09 11:28:14 [INFO] Starting service [Tomcat]
+2025-02-09 11:28:14 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-09 11:28:14 [INFO] Initializing Spring embedded WebApplicationContext
+2025-02-09 11:28:14 [INFO] HikariPool-19 - Starting...
+2025-02-09 11:28:14 [INFO] HikariPool-19 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bee8c69
+2025-02-09 11:28:14 [INFO] HikariPool-19 - Start completed.
+2025-02-09 11:28:14 [WARN] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-09 11:28:14 [INFO] Starting ProtocolHandler ["http-nio-8080"]
+2025-02-09 11:28:14 [INFO] Started Cristianag47Ev2MiAlquilerApplication in 0.312 seconds (process running for 1964.058)
+2025-02-09 16:40:18 [INFO] Pausing ProtocolHandler ["http-nio-8080"]
+2025-02-09 16:40:18 [INFO] Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-09 16:40:18 [INFO] HikariPool-19 - Shutdown initiated...
+2025-02-09 16:40:18 [INFO] HikariPool-19 - Shutdown completed.

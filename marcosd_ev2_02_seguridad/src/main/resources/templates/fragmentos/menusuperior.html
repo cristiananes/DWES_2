@@ -1,0 +1,17 @@
+<div class="container mt-3 border-5 py-2 mt-4 bg-secondary bg-opacity-25  border-secondary border-start-0 rounded-start rounded-end"	th:fragment="menuSuperior">
+    <ul class="nav nav-pills">
+		<li class="nav-item">
+	        <a class=" btn btn-outline-primary py-2" th:href="@{/}" th:text="Inicio">Inicio</a>
+        </li>
+      <!-- Astronautas -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle py-2 mx-2 btn btn-outline-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" th:text="Usuarios">
+          Usuarios
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" th:href="@{/user}" th:text="Todos">Todos</a></li>       
+          <li><a class="dropdown-item" th:href="@{/user/addAstronauta}" th:text="Add">Añadir</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>

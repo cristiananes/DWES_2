@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  db10011:
+    image: mysql:5.7
+    volumes:
+      - ./db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: astronautasaula8
+
+    ports:
+      - "10011:3306"  # usa el puerto 10011 en el host
+  
+  tomcat:
+    image: tomcat:11.0.2-jdk21-temurin-noble
+    container_name: tomcat
+    volumes:
+      - ./tomcat:/usr/local/tomcat/webapps  # Carpeta para el WAR
+    ports:
+      - "9090:8080"  # Expone Tomcat en el puerto 9090
+    restart: always

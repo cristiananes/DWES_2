@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio</title>
+    <!-- Insertar las librerías comunes -->
+    <div th:replace="~{fragmentos/librerias :: librerias}"></div>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Insertar el menú superior -->
+        <div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+        <h1 class="mb-4" sec:authentication="name">Bienvenido a la Aplicación</h1>
+        <!-- Caja para Usuarios con fondo de color -->
+        <div class="card bg-light mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Usuarios</h5>
+                <p class="card-text" sec:authorize="hasAnyRole('ADMIN')">Esto solo lo ve un administrador</p>
+                <p class="card-text" sec:authorize="hasAnyRole('USER')">Esto solo lo ve un usuario plano</p>
+                <a th:href="@{/user}" class="btn btn-primary">Ir a Usuarios</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

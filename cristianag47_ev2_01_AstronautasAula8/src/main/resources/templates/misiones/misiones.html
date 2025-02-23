@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misiones</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #0d6efd, #6c757d);
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #fff;
+            color: #000;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <div th:replace="~{fragments.html :: menu}"></div>
+
+    <main>
+        <div class="container">
+            <h1 class="mb-4">Lista de Misiones</h1>
+            <a href="#" class="btn btn-primary mb-3" th:href="@{/mision/add}">Añadir Misión</a>
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Nave</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody th:each="mision : ${misiones}">
+                    <tr>
+                        <td th:text="${mision.id}"></td>
+                        <td><a class="btn btn-primary btn-sm" th:text="${mision.nombre}" th:href="@{/mision/{id}(id=${mision.id})}"></a></td>
+                        <td th:if="${mision.nave != null}" th:text="${mision.nave.nombre}">no</td>
+                        <td th:if="${mision.nave == null}">sin nave</td>
+                        <td th:text="${mision.fechaInicio}"></td>
+                        <td th:text="${mision.fechaFin}"></td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm" th:href="@{/mision/update/{id}(id=${mision.id})}" title="Editar">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            <a href="#" class="btn btn-danger btn-sm" th:href="@{/mision/eliminar/{id}(id=${mision.id})}" title="Eliminar">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>

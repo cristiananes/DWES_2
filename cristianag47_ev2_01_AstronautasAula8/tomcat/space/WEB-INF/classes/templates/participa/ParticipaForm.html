@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Crear Participación</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #0d6efd, #6c757d);
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container {
+            background-color: #fff;
+            color: #000;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación (opcional) -->
+    <div th:replace="~{fragments.html :: menu}"></div>
+
+    <div class="form-container">
+        <h1 class="text-center">Crear Participación</h1>
+        <form th:object="${participa}" th:action="@{/participa/save}" th:method="POST">
+            <!-- Selección de Astronauta -->
+            <div class="mb-3">
+                <label class="form-label" for="idAstronauta">Astronauta</label>
+                <select class="form-select"
+                        th:field="*{id_participa.idAstronauta}"
+                        id="idAstronauta">
+                    <option value="">-- Seleccione un astronauta --</option>
+                    <option th:each="a : ${astronautas}"
+                            th:value="${a.id}"
+                            th:text="${a.nombre}">
+                    </option>
+                </select>
+            </div>
+
+            <!-- Selección de Misión -->
+            <div class="mb-3">
+                <label class="form-label" for="idMision">Misión</label>
+                <select class="form-select"
+                        th:field="*{id_participa.idMision}"
+                        id="idMision">
+                    <option value="">-- Seleccione una misión --</option>
+                    <option th:each="m : ${misiones}"
+                            th:value="${m.id}"
+                            th:text="${m.nombre}">
+                    </option>
+                </select>
+            </div>
+
+            <!-- Rol en la PK compuesta (si lo manejas allí) -->
+            <div class="mb-3">
+                <label class="form-label" for="rol">Rol</label>
+                <input class="form-control"
+                       th:field="*{id_participa.rol}"
+                       id="rol"
+                       placeholder="Rol en la misión" />
+            </div>
+
+            <!-- Tarea en Participa (fuera de la PK) -->
+            <div class="mb-3">
+                <label class="form-label" for="tarea">Tarea</label>
+                <input class="form-control"
+                       th:field="*{tarea}"
+                       id="tarea"
+                       placeholder="Descripción/Tarea" />
+            </div>
+
+            <div class="d-grid">
+                <button  type="submit" class="btn btn-primary">Crear Participación</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

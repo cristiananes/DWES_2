@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la Nave</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #0d6efd, #6c757d);
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .ficha-nave {
+            margin-top: 100px;
+            background: white;
+            color: black;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <div th:replace="~{fragments.html :: menu}"></div>
+
+    <main>
+        <div class="container">
+            <!-- Ficha de la Nave -->
+            <div class="ficha-nave">
+                <h1 class="display-4 fw-bold">Detalle de la Nave</h1>
+                <p class="lead">Nombre: <strong th:text="${nave.nombre}">Discovery</strong></p>
+                <p class="lead">Capacidad: <strong th:text="${nave.capacidad}">6</strong></p>
+                <div class="mt-4">
+                    <a class="btn btn-primary btn-lg" th:href="@{/nave/lista}">Volver a la lista</a>
+                    <a class="btn btn-warning btn-lg" th:href="@{/nave/update/{id}(id=${nave.id})}">Editar</a>
+                </div>
+            </div>
+
+            <!-- Nueva tabla: misiones en las que participa la nave -->
+            <h2 class="mt-5">Misiones Asignadas a esta Nave</h2>
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nombre de la Misión</th>
+                    </tr>
+                </thead>
+                <tbody th:each="mAsignada : ${nave.misiones}">
+                    <tr>
+                        <td th:text="${mAsignada.nombre}"></td>
+                    </tr>
+                    <tr>
+                           <td> <a class="btn btn-success btn-sm"
+                               th:href="@{desasignar/{misionId} (misionId=${mAsignada.id})}">
+                                Desasignar
+                            </a>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+
+            <!-- Tabla con las misiones sin nave -->
+            <h2 class="mt-5">Misiones sin Nave</h2>
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nombre de la Misión</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody th:each="m : ${misiones}">
+                    <tr>
+                        <!-- Nombre de la Misión -->
+                        <td th:text="${m.nombre}"></td>
+                        <!-- Botón para asignar la misión a la nave actual -->
+                        <td>
+                            <a class="btn btn-success btn-sm"
+                               th:href="@{nave/asignar/{naveId}/{misionId}(naveId=${nave.id}, misionId=${m.id})}">
+                                Asignar
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

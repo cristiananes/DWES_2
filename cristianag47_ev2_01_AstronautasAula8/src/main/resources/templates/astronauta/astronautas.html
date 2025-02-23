@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronautas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #0d6efd, #6c757d);
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            margin-top: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            color: #000;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        .modal-body {
+    color: black !important;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <div th:replace="~{fragments.html :: menu}"></div>
+
+    <main>
+        <div class="container">
+            <h1 class="mb-4">Lista de Astronautas</h1>
+            <a href="#" class="btn btn-success" th:href="@{/astronauta/csv}">Descargar CSV</a>
+            <a href="#" class="btn btn-success" th:href="@{/astronauta/xlsx}">Descargar Excel</a>
+            <a href="#" class="btn btn-primary" th:href="@{/astronauta/addAstronauta}">Añadir</a>
+            <div class="d-flex justify-content-between mt-4">
+    <!-- Botón Anterior -->
+    <a th:if="${hayAnterior}" 
+       th:href="@{/astronauta/pagina/{pagina}(pagina=${pagina - 2})}" 
+       class="btn btn-primary">
+        &laquo; Anterior
+    </a>
+    
+    <!-- Botón Siguiente -->
+    <a th:if="${haySiguiente}" 
+       th:href="@{/astronauta/pagina/{pagina}(pagina=${pagina})}" 
+       class="btn btn-primary">
+        Siguiente &raquo;
+    </a>
+</div>
+
+            <table class="table table-hover mt-4">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Nacionalidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody th:each="a : ${astronautas}">
+                    <tr>
+                        <td th:text="${a.id}"></td>
+                        <td><button class="btn btn-primary btn-sm" 
+               data-bs-toggle="modal" 
+               data-bs-target="#modalAstronauta"
+               th:attr="data-id=${a.id}, 
+                        data-nombre=${a.nombre}, 
+                        data-edad=${a.edad}">
+                <span th:text="${a.nombre}"></span>
+            </button></td>
+                        <td th:text="${a.edad}"></td>
+                        <td th:text="${a.nacionalidad}"></td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm" th:href="@{/updateAstronauta/{id}(id=${a.id})}"><i class="bi bi-pencil"></i></a>
+                            <a href="#" class="btn btn-danger btn-sm" th:href="@{/astronauta/eliminar/{id}(id=${a.id})}"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- MODAL GENÉRICO -->
+<div class="modal fade" id="modalAstronauta" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Detalles del Astronauta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>ID:</strong> <span id="modalId"></span></p>
+                <p><strong>Nombre:</strong> <span id="modalNombre"></span></p>
+                <p><strong>Edad:</strong> <span id="modalEdad"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a id="modalVerAstronauta" class="btn btn-primary">Ver Astronauta</a>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <!-- Bootstrap JS -->
+       <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("modalAstronauta");
+
+        modal.addEventListener("show.bs.modal", function (event) {
+            var button = event.relatedTarget; // Botón que activó el modal
+
+            if (!button) {
+                console.error("Error: No se pudo obtener el botón que activó el modal.");
+                return;
+            }
+
+            var id = button.getAttribute("data-id") || "N/A";
+            var nombre = button.getAttribute("data-nombre") || "N/A";
+            var edad = button.getAttribute("data-edad") || "N/A";
+
+            console.log("Astronauta seleccionado - ID:", id, "Nombre:", nombre, "Edad:", edad);
+
+        // Rellenar el modal con los datos del astronauta seleccionado
+        document.getElementById("modalId").innerHTML = id;
+        document.getElementById("modalNombre").innerHTML = nombre;
+        document.getElementById("modalEdad").innerHTML = edad;
+        
+            // Cambiar la URL del botón "Ver Astronauta"
+            document.getElementById("modalVerAstronauta").href = "/astronauta/" + id;
+        });
+    });
+</script>
+
+</body>
+</html>

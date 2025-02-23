@@ -1,17 +1,18 @@
-2025-01-16 12:10:46 [INFO] Starting Cristianag47Ev201AstronautasAula8Application using Java 17.0.8.1 with PID 10504 (C:\Users\cristian\Documents\Workspace_2.0\cristianag47_ev2_01_AstronautasAula8\target\classes started by cristian in C:\Users\cristian\Documents\Workspace_2.0\cristianag47_ev2_01_AstronautasAula8)
-2025-01-16 12:10:46 [INFO] No active profile set, falling back to 1 default profile: "default"
-2025-01-16 12:10:46 [WARN] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2025-01-16 12:10:46 [INFO] Initializing ProtocolHandler ["http-nio-8080"]
-2025-01-16 12:10:46 [INFO] Starting service [Tomcat]
-2025-01-16 12:10:46 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.34]
-2025-01-16 12:10:46 [INFO] Initializing Spring embedded WebApplicationContext
-2025-01-16 12:10:46 [INFO] HikariPool-17 - Starting...
-2025-01-16 12:10:46 [INFO] HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ff359f8
-2025-01-16 12:10:46 [INFO] HikariPool-17 - Start completed.
-2025-01-16 12:10:46 [WARN] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-16 12:10:46 [INFO] Starting ProtocolHandler ["http-nio-8080"]
-2025-01-16 12:10:46 [INFO] Started Cristianag47Ev201AstronautasAula8Application in 0.284 seconds (process running for 5391.402)
-2025-01-16 12:24:23 [INFO] Pausing ProtocolHandler ["http-nio-8080"]
-2025-01-16 12:24:23 [INFO] Stopping ProtocolHandler ["http-nio-8080"]
-2025-01-16 12:24:23 [INFO] HikariPool-17 - Shutdown initiated...
-2025-01-16 12:24:23 [INFO] HikariPool-17 - Shutdown completed.
+2025-02-14 18:58:42 [INFO] Starting Cristianag47Ev201AstronautasAula8Application using Java 17.0.8.1 with PID 13692 (C:\Users\cristian\Documents\Workspace_2.0\cristianag47_ev2_01_AstronautasAula8\target\classes started by cristian in C:\Users\cristian\Documents\Workspace_2.0\cristianag47_ev2_01_AstronautasAula8)
+2025-02-14 18:58:42 [INFO] No active profile set, falling back to 1 default profile: "default"
+2025-02-14 18:58:43 [WARN] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-14 18:58:43 [INFO] Initializing ProtocolHandler ["http-nio-8075"]
+2025-02-14 18:58:43 [INFO] Starting service [Tomcat]
+2025-02-14 18:58:43 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14 18:58:43 [INFO] Initializing Spring embedded WebApplicationContext
+2025-02-14 18:58:44 [INFO] HikariPool-1 - Starting...
+2025-02-14 18:58:44 [INFO] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a7ca760
+2025-02-14 18:58:44 [INFO] HikariPool-1 - Start completed.
+2025-02-14 18:58:47 [WARN] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14 18:58:48 [INFO] Starting ProtocolHandler ["http-nio-8075"]
+2025-02-14 18:58:48 [INFO] Started Cristianag47Ev201AstronautasAula8Application in 5.704 seconds (process running for 6.334)
+2025-02-14 18:59:08 [INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-15 14:37:31 [INFO] Pausing ProtocolHandler ["http-nio-8075"]
+2025-02-15 14:37:32 [INFO] Stopping ProtocolHandler ["http-nio-8075"]
+2025-02-15 14:37:32 [INFO] HikariPool-1 - Shutdown initiated...
+2025-02-15 14:37:32 [INFO] HikariPool-1 - Shutdown completed.
