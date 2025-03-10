@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+	    <!-- Insertar las librerías comunes -->
+	    <div th:replace="~{fragmentos/librerias :: librerias}"></div>
+	    
+</head>
+<body>
+
+<div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+
+<div class="container-fluid mt-5">
+        <div class="row mx-3">
+            <!-- Menú lateral -->
+            <nav class="col-3 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <h5 class="px-3 py-2">Configuración</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/config/paginas}">
+								Páginas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  th:href="@{/config/idioma}" >
+								Idioma</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active bg-primary text-white" th:href="@{/config/borrados}">
+								Ver borrados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+								Fechas</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+        <!-- Contenido principal -->
+        <main class="col-8 ms-sm-auto px-md-4">
+            <div class="pt-4">
+                <h2>Visializar elementos borrados</h2>
+                
+                <form action="/config/borrados" method="POST" class="mt-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="verborrados" name="verborrados">
+                        <label class="form-check-label" for="verborrados">Ver borrados</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+                </form>
+            </div>
+        </main>
+        </div>
+    </div>
+
+</body>
+</html>

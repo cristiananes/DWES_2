@@ -1,0 +1,41 @@
+<div class="container mt-3 border-5 py-2 mt-4 bg-secondary bg-opacity-25  border-secondary border-start-0 rounded-start rounded-end"	th:fragment="menuSuperior">
+    <ul class="nav nav-pills">
+		<li class="nav-item">
+	        <a class=" btn btn-outline-primary py-2" th:href="@{/}" th:text="#{menu.inicio}">Inicio</a>
+        </li>
+      <!-- Astronautas -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle py-2 mx-2 btn btn-outline-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" th:text="#{menu.astronauta.principal}">
+          Astronautas
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" th:href="@{/astronauta}" th:text="#{menu.astronauta.todos}">Todos</a></li>       
+          <li><a class="dropdown-item" th:href="@{/astronauta/addAstronauta}" th:text="#{menu.astronauta.anadir}">Añadir</a></li>
+        </ul>
+      </li>
+	  <li><a class="nav-link py-2 mx-2 btn btn-outline-light" th:href="@{/participa}" th:text="#{menu.participa}">Participa</a></li>
+      <!-- Misiones -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle py-2 mx-1 btn btn-outline-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" th:text="#{menu.mision.principal}">
+          Misiones
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" th:href="@{/mision}" th:text="#{menu.mision.todos}">Todos</a></li>
+          <li><a class="dropdown-item" th:href="@{/mision/addMision}" th:text="#{menu.mision.anadir}">Añadir</a></li>
+        </ul>
+      </li>
+      <!-- Naves -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle py-2 mx-1 btn btn-outline-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" th:text="#{menu.nave.principal}">
+          Naves
+        </a>
+        <ul class="dropdown-menu ">
+          <li><a class="dropdown-item" th:href="@{/nave}" th:text="#{menu.nave.todos}">Todos</a></li>
+          <li><a class="dropdown-item" th:href="@{/nave/addNave}" th:text="#{menu.nave.anadir}">Añadir</a></li>
+        </ul>
+      </li>
+		<li class="nav-item">
+    	    <a class=" btn btn-outline-primary py-2 mx-2" th:href="@{/config/idioma}"><i class="bi bi-gear"></i></a>
+        </li>
+    </ul>
+  </div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Añadir Astronauta</title>
+    <!-- Bootstrap CSS -->
+	<!-- Insertar las librerías comunes -->
+	    <div th:replace="~{fragmentos/librerias :: librerias}"></div>
+</head>
+<body>
+	
+	<div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+	
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h2 class="text-center mb-4">Nave espacial</h2>
+            <form th:object="${nave}" th:action="@{/nave/saveNaveDTO}" th:method="post">
+                <!-- Campo para el ID -->
+                <div class="mb-3">
+                    <label for="id" class="form-label">ID</label>
+                    <input th:field="*{id}" type="number" readonly class="form-control form-control-sm" id="id" name="id" placeholder="Ingrese el ID" required>
+                </div>
+
+                <!-- Campo para el nombre -->
+                <div class="mb-2">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input th:field="*{nombre}" type="text" class="form-control form-control-sm" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
+					<span class="badge bg-danger" th:if=="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+                </div>
+
+                <div class="mb-2">
+					<!-- <label for="capacidad" class="form-label">Capacidad</label>					-->
+                    <input hidden th:field="*{capacidad}" type="number" class="form-control form-control-sm" id="capacidad" name="capacidad" min="1" max="10000" placeholder="Ingrese la edad" required>
+                   <input hidden th:field="*{misiones}" class="form-control form-control-sm" id="capacidad" name="capacidad" min="1" max="10000" placeholder="Ingrese la edad" required>
+                </div>
+
+				<div class="d-flex">
+				    <!-- Botón de Guardar cambios con más espacio y margen derecho -->
+				    <button type="submit" class="btn btn-primary btn-sm flex-grow-2 me-3">Guardar cambios</button>
+				    
+				    <!-- Botón de Cancelar -->
+				    <a th:href="@{/nave}" class="btn btn-danger btn-sm">Cancelar</a>
+				</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
