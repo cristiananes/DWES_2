@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Lista de Astronautas</title>
+	
+	    <!-- Insertar las librerías comunes -->
+	    <div th:replace="~{fragmentos/librerias :: librerias}"></div>
+	</head>
+<body>
+	
+	<div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+	
+	<div th:if="${error_message!=null and error_message.length()>0}" 
+		class="my-2 container alert alert-warning alert-dismissible fade show" role="alert">
+	    <strong>¡Error!</strong> 		<span th:text=${error_message}>bla</span>.
+	    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+        <!-- Tabla -->
+        <div class="col-9">
+            <div class="table-responsive">
+                <table class="table table-hover text-center align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Astronauta</th>
+                            <th>Misión</th>
+                            <th>Rol</th>
+                            <th>Tarea</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="p: ${participas}">
+							<td th:text="${p.astronauta.nombre}"
+							    th:attr="data-bs-toggle='tooltip', title='['+${p.astronauta.id}+'] '+${p.astronauta.nombre}+' ('+${p.astronauta.pais}+')'">
+							</td>
+                            <td th:text="${p.mision.nombre}">1</td>
+                            <td th:text="${p.id.rol}">1</td>
+                            <td th:text="${p.descripcionTarea}">1</td>
+                            <td>
+                                <a class="btn btn-danger btn-sm" th:href="@{/participa/delete/{idMision}/{idAstronauta}/{rol}(idMision=${p.mision.id},idAstronauta=${p.astronauta.id},rol=${p.id.rol})}">
+                                    <span class="bi bi-trash"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white text-center">
+                    <strong>Añadir Participación</strong>
+                </div>
+                <div class="card-body">
+                    <form th:object="${participa}" th:action="@{/participa/saveParticipa}" method="post">
+                        <!-- Desplegable Astronautas -->
+                        <div class="mb-3">
+                            <label for="astronautaId" class="form-label">Astronauta</label>
+                            <select  th:field="*{astronauta}" class="form-select" id="astronautaId" name="astronautaId" required>
+                                <option value="" disabled selected>Seleccionar astronauta</option>
+                                <option th:each="a : ${astronautas}" 
+                                        th:value="${a.id}" 
+                                        th:text="${a.nombre}">
+                                    Nombre astronauta
+                                </option>
+                            </select>
+                        </div>
+
+                        <!-- Desplegable Misiones -->
+                        <div class="mb-3">
+                            <label for="misionId" class="form-label">Misión</label>
+                            <select  th:field="*{mision}" class="form-select" id="misionId" name="misionId" required>
+                                <option value="" disabled selected>Seleccionar misión</option>
+                                <option th:each="m : ${misiones}" 
+                                        th:value="${m.id}" 
+                                        th:text="${m.nombre}">
+                                    Nombre misión
+                                </option>
+                            </select>
+                        </div>
+
+                        <!-- Desplegable Roles -->
+                        <div class="mb-3">
+                            <label for="rol" class="form-label">Rol</label>
+							<select  th:field="*{id.rol}" class="form-select" id="rol" name="rol" required>
+							    <option value="" disabled selected>Seleccionar rol</option>
+							    <option value="Comandante">Comandante</option>
+							    <option value="Piloto">Piloto</option>
+							    <option value="Especialista de misión">Especialista de misión</option>
+							    <option value="Ingeniero de vuelo">Ingeniero de vuelo</option>
+							    <option value="Científico">Científico</option>
+							    <option value="Operador de comunicaciones">Operador de comunicaciones</option>
+							</select>
+                        </div>
+                        
+						<div class="mb-3">
+						    <label for="descripcionTarea" class="form-label">Descripcion</label>
+						    <textarea th:field="*{descripcionTarea}" class="form-control" id="descripcionTarea" name="descripcionTarea" required></textarea>
+						</div>
+
+                        <!-- Botón Enviar -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Asegúrate de inicializar los tooltips de Bootstrap -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl, {
+            placement: 'bottom',  
+            customClass: 'custom-tooltip'
+        });
+    });
+});
+</script>
+
+</body>
+</html>

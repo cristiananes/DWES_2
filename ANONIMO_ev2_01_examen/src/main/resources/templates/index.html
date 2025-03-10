@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <title>Inicio</title>
+  
+	    <div th:replace="~{fragmentos/librerias :: librerias}"></div>
+	
+</head>
+<body>
+  <!-- Menú superior -->
+<div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+
+  <!-- Página principal con zonas de clic -->
+  <div class="container text-center mt-5">
+    <h1 th:text="#{inicio.bienvenida}">...</h1>
+    <p th:text="#{inicio.subbienvenida}">...</p>
+
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <a  th:href="@{/astronauta}" class="text-decoration-none">
+          <div class="card bg-primary text-white">
+            <div class="card-body">
+              <h3 class="card-title" th:text="#{menu.astronauta.principal}">Astronautas</h3>
+              <p class="card-text" th:text="#{inicio.astronauta.texto}">Explora y gestiona los astronautas.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a th:href="@{/mision}" class="text-decoration-none">
+          <div class="card bg-success text-white">
+            <div class="card-body">
+              <h3 class="card-title" th:text="#{menu.mision.principal}">Misiones</h3>
+              <p class="card-text"  th:text="#{inicio.misiones.texto}">Descubre y organiza misiones espaciales.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a  th:href="@{/nave}" class="text-decoration-none">
+          <div class="card bg-warning text-dark">
+            <div class="card-body">
+              <h3 class="card-title" th:text="#{menu.nave.principal}">Naves</h3>
+              <p class="card-text"  th:text="#{inicio.naves.texto}">Consulta y añade nuevas naves espaciales.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

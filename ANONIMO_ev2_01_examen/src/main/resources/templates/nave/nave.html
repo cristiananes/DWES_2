@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha del Astronauta</title>
+	<!-- Insertar las librerías comunes -->
+	    <div th:replace="~{fragmentos/librerias :: librerias}"></div>
+</head>
+<body>
+ 
+	<div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+
+    <!-- Contenido centrado -->
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-10">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h5 th:text="${nave.nombre}" class="card-title text-primary">Enterprise</h5>
+                        <p class="card-text">Nave espacial con capacidad de <span th:text="${nave.capacidad}">25</span> toneladas.</p>
+                        <a th:href="@{/nave}" class="btn btn-primary">Volver</a>
+				    	<a class="btn btn-outline-secondary" 	th:href="@{/nave/updateNave/{id}(id=${nave.id})}"><span class="bi bi-pencil"></span></a>
+				    	<a class="btn btn-outline-danger" 	th:href="@{/nave/delete/{id}(id=${nave.id})}"><span class="bi bi-trash"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabla de misiones -->
+    <div class="container" th:if="${#lists.size(nave.misiones)>0}">
+        <div class="row justify-content-center mt-4">
+            <div class="col-10">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h5>Listado de Misiones</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-bordered table-striped text-center">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Fecha de Inicio</th>
+                                    <th>Fecha de Fin</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="m:${nave.misiones}">
+                                    <td><a th:text="${m.nombre}" th:href="@{/mision/{idMision}(idMision=${m.id})}"></a></td>
+                                    <td th:text="${m.fecha_inicio}">2025-01-01</td>
+                                    <td th:text="${m.fecha_fin}">2025-06-01</td>
+                                    <td><a class="btn btn-outline-danger btn-sm" th:href="@{/nave/desvincularNave/{idMision}/{idNave}(idMision=${m.id},idNave=${nave.id})}"><span class="bi bi-trash"></span></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+        
+        <!-- Mensaje alternativo si no hay misiones -->
+	<div class="container" th:if="${#lists.size(nave.misiones) == 0}">
+	<div class="row justify-content-center mt-4">
+	    <div class="col-10">
+	        <div class="alert alert-warning text-center">
+	            No hay misiones asignadas a esta nave.
+	        </div>
+	    </div>
+	</div>
+	</div>
+	
+	  <!-- Tabla de misiones -->
+    <div class="container mb-5" >
+        <div class="row justify-content-center mt-4">
+            <div class="col-10">
+                <div class="card shadow">
+                    <div class="card-header bg-success bg-opacity-25  text-white text-center">
+                        <h5 class="text-black">Asignar esta nave a otra misión</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table  table-sm table-bordered table-striped text-center">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Fecha de Inicio</th>
+                                    <th>Fecha de Fin</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="m:${misionesSinNave}">
+                                    <td><a th:text="${m.nombre}" th:href="@{/mision/{idMision}(idMision=${m.id})}"></a></td>
+                                    <td th:text="${m.fecha_inicio}">2025-01-01</td>
+                                    <td th:text="${m.fecha_fin}">2025-06-01</td>
+                                    <td><a class="btn btn-success btn-sm" th:text="'Asignar ' + ${m.nombre} + ' a '+${nave.nombre}" th:href="@{/nave/asignarNave/{idMision}/{idNave}(idMision=${m.id},idNave=${nave.id})}"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+
+</body>
+</html>
+
+

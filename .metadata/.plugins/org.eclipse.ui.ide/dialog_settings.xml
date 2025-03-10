@@ -38,6 +38,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\cristian\Documents\Workspace_2.0\marcosd_ev2_05_firebase"/>
+			<item value="C:\Users\cristian\Documents\Workspace_2.0\ANONIMO_ev2_01_examen"/>
+			<item value="C:\Users\cristian\Documents\Workspace_2.0\cristianag47_ev2_03_ordenacion"/>
 			<item value="C:\Users\cristian\Documents\Workspace_2.0\marcosd_ev2_02_seguridad"/>
 		</list>
 	</section>
