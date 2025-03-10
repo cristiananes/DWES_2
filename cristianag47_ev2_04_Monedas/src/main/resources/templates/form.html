@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión de Monedas</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <h1>Conversión de Monedas</h1>
+    <form th:action="@{/convertir}" method="post">
+        <div>
+            <label for="monedaOrigen">Moneda de Origen:</label>
+            <select id="monedaOrigen" name="monedaOrigen">
+                <option value="" disabled selected>Seleccione una moneda</option>
+                <option th:each="moneda : ${monedas}"
+                        th:value="${moneda}"
+                        th:text="${moneda}">
+                </option>
+            </select>
+        </div>
+        <div>
+            <label for="monedaDestino">Moneda de Destino:</label>
+            <select id="monedaDestino" name="monedaDestino">
+                <option value="" disabled selected>Seleccione una moneda</option>
+                <option th:each="moneda : ${monedas}"
+                        th:value="${moneda}"
+                        th:text="${moneda}">
+                </option>
+            </select>
+        </div>
+        <div>
+            <label for="monto">Monto:</label>
+            <input type="text" id="monto" name="monto" placeholder="Ingrese el monto" />
+        </div>
+        <div>
+            <button type="submit">Convertir</button>
+        </div>
+    </form>
+
+    <h2>Resultado de la Conversión</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Moneda Origen</th>
+                <th>Moneda Destino</th>
+                <th>Monto Origen</th>
+                <th>Monto Convertido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:if="${resultado != null}">
+                <td th:text="${resultado.monedaOrigen}"></td>
+                <td th:text="${resultado.monedaDestino}"></td>
+                <td th:text="${resultado.montoOrigen}"></td>
+                <td th:text="${resultado.montoConvertido}"></td>
+            </tr>
+            <tr th:if="${resultado == null}">
+                <td colspan="4">No hay resultados para mostrar</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

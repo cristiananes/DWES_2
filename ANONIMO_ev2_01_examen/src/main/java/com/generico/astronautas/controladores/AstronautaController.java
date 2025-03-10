@@ -13,10 +13,14 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 import org.springframework.boot.Banner.Mode;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+=======
+import org.springframework.data.domain.Page;
+>>>>>>> 03eaf5eca47467f8cb5cdaa8a46f9ec52a535592
 
 import com.generico.astronautas.beans.Astronauta;
 import com.generico.astronautas.repositorios.*;
@@ -52,6 +56,7 @@ public class AstronautaController {
 		
 		ModelAndView salida = new ModelAndView("redirect:/astronauta/pg/0");
 
+<<<<<<< HEAD
 		
 		
 		/*
@@ -60,6 +65,12 @@ public class AstronautaController {
 		 * 
 		 * salida.addObject("astronautas", lista);
 		 */
+=======
+		/*
+		Iterable<Astronauta> lista = astronautaRepositorio.findAll();
+		salida.addObject("astronautas", lista);
+		*/
+>>>>>>> 03eaf5eca47467f8cb5cdaa8a46f9ec52a535592
 		return salida;
 	}
 	
@@ -136,6 +147,7 @@ public class AstronautaController {
 		return 	"redirect:/astronauta";
 	}
 	
+<<<<<<< HEAD
 	
 	
 	
@@ -146,6 +158,11 @@ public class AstronautaController {
 	    	ModelAndView salida = new ModelAndView("astronauta/astronautas");
 	    	salida.addObject("astronautas",astronautaService.getPageOrdered(0, por) );
 	    		return salida;
+=======
+	    @PostMapping("/ordenar")
+	    public void ordenarAstronautas(@RequestParam String por) {
+	    	
+>>>>>>> 03eaf5eca47467f8cb5cdaa8a46f9ec52a535592
 	    }
 
 	

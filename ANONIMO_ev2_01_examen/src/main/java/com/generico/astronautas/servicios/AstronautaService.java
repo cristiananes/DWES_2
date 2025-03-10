@@ -1,8 +1,11 @@
 package com.generico.astronautas.servicios;
 
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
+=======
+>>>>>>> 03eaf5eca47467f8cb5cdaa8a46f9ec52a535592
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -21,6 +24,7 @@ public class AstronautaService {
 	private AstronautaRepository astronautaRepository;
 	
 	private final int TAMANIO_PAGINA = 3;
+<<<<<<< HEAD
 	private Boolean actualDirection;
 	private String orden;
 	
@@ -50,6 +54,19 @@ public class AstronautaService {
 		Sort ordenacion = Sort.by(direction, por);
 		Pageable pageable = PageRequest.of(pagina, TAMANIO_PAGINA, ordenacion);
 		
+=======
+	
+	
+	public Page<Astronauta> getPage(int pagina) {
+		
+		Pageable pageable = PageRequest.of(pagina, TAMANIO_PAGINA);
+		
+		return astronautaRepository.findAll(pageable);
+	}
+	public Page<Astronauta> getPageOrdered (int pagina, String por){
+		Sort sort = Sort.by(por);
+		Pageable pageable = PageRequest.of(pagina, TAMANIO_PAGINA, sort);
+>>>>>>> 03eaf5eca47467f8cb5cdaa8a46f9ec52a535592
 		return astronautaRepository.findAll(pageable);
 	}
 	
