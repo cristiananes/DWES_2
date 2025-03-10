@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Añadir Astronauta</title>
+	<!-- Insertar las librerías comunes -->
+	    <div th:replace="~{fragmentos/librerias :: librerias}"></div>
+</head>
+<body>
+	
+	<div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+	
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h2 class="text-center mb-4">Astronauta</h2>
+            <form th:object="${astronauta}" th:action="@{/astronauta/saveAstronauta}" th:method="post">
+                <!-- Campo para el ID -->
+                <div class="mb-3">
+                    <label for="id" class="form-label">ID</label>
+                    <input th:field="*{id}" type="number" readonly class="form-control form-control-sm" id="id" name="id" placeholder="Ingrese el ID" required>
+                </div>
+
+                <!-- Campo para el nombre -->
+                <div class="mb-2">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input th:field="*{nombre}" type="text" class="form-control form-control-sm" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
+                </div>
+
+                <!-- Campo para seleccionar el país -->
+                <div class="mb-2">
+                    <label for="pais" class="form-label">País</label>
+                    <select th:field="*{pais}" class="form-select form-select-sm" id="pais" name="pais" required>
+                        <option value="" selected>Seleccione un país</option>
+                        <option value="Estados Unidos">Estados Unidos</option>
+                        <option value="Rusia">Rusia</option>
+                        <option value="Japón">Japón</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Francia">Francia</option>
+                        <option value="India">India</option>
+                         <option value="Canadá">Canadá</option>
+                        <option value="Brasil">Brasil</option>
+                    </select>
+                </div>
+
+                <!-- Campo para la edad -->
+                <div class="mb-2">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input th:field="*{edad}" type="number" class="form-control form-control-sm" id="edad" name="edad" min="18" max="100" placeholder="Ingrese la edad" required>
+                </div>
+
+				<div class="d-flex">
+				    <!-- Botón de Guardar cambios con más espacio y margen derecho -->
+				    <button type="submit" class="btn btn-primary btn-sm flex-grow-2 me-3">Guardar cambios</button>
+				    
+				    <!-- Botón de Cancelar -->
+				    <a th:href="@{/astronauta}" class="btn btn-danger btn-sm">Cancelar</a>
+				</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Astronautas</title>
+	<!-- Insertar las librerías comunes -->
+	    <div th:replace="~{fragmentos/librerias :: librerias}"></div>
+
+</head>
+<body>
+	
+	<div th:insert="~{fragmentos/menusuperior :: menuSuperior}"></div>
+	
+    <div class="container mt-5">
+			
+        <div class="row justify-content-center">
+            <!-- Espacio en ambos lados de la tabla -->
+            <div class="col-lg-12">
+                <div class="table-responsive">
+					<table class="table table-hover text-center align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Nave</th>
+                                <th>Fecha inicio</th>
+								<th>Fecha fin</th>
+								<th></th>
+								<th></th>
+							</tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="m: ${misiones}">
+                                <td th:text="${m.id}">1</td>
+                                <td><a 	class="btn btn-primary btn-sm"	th:text="${m.nombre}" th:href="@{/mision/updateMision/{id}(id=${m.id})}">Pedro</a></td>
+                                <td th:if="${m.nave==null}"><a class="btn btn-success btn-sm" 	th:href="@{/mision/{id}(id=${m.id})}"><span class="bi bi-clipboard-plus-fill"></span></a></tdth:if="${m.nave==null}">
+								<td th:unless="${m.nave==null}" th:text="${m.nave.nombre}"></td>
+                                <td th:text="${#temporals.format(m.fecha_inicio)}">25</td>
+								<td th:text="${#temporals.format(m.fecha_fin)}">25</td>
+								<td><a class="btn btn-danger btn-sm" 	th:href="@{/mision/delete/{id}(id=${m.id})}"><span class="bi bi-trash"></span></a></td>
+								<td><a class="btn btn-primary btn-sm" 	th:href="@{/mision/{id}(id=${m.id})}"><i class="bi bi-file-earmark-text-fill"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+					<a class="btn btn-primary btn-lg" 	th:href="@{/mision/addMision}"><span class="bi bi-clipboard-plus-fill"></span> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
