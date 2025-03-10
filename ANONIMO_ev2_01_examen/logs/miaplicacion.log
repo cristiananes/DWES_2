@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-03-02 10:31:44 [INFO] Starting GenericoExamenApplication using Java 17.0.11 with PID 6392 (D:\WorkSpace\DWES_2\ANONIMO_ev2_01_examen\target\classes started by cristian in D:\WorkSpace\DWES_2\ANONIMO_ev2_01_examen)
 2025-03-02 10:31:44 [INFO] No active profile set, falling back to 1 default profile: "default"
 2025-03-02 10:31:45 [INFO] Initializing ProtocolHandler ["http-nio-8081"]
@@ -11,3 +12,18 @@
 2025-03-02 10:31:48 [INFO] Starting ProtocolHandler ["http-nio-8081"]
 2025-03-02 10:31:48 [INFO] Started GenericoExamenApplication in 4.468 seconds (process running for 5.223)
 2025-03-02 10:31:53 [INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+=======
+2025-02-25 20:04:32 [INFO] Starting GenericoExamenApplication using Java 17.0.9 with PID 1480 (/Users/marcos/Library/CloudStorage/OneDrive-ConsejeríadeEducación/_IES/_C_DWES/PROYECTOS2425/ANONIMO_ev2_01_examen/target/classes started by marcos in /Users/marcos/Library/CloudStorage/OneDrive-ConsejeríadeEducación/_IES/_C_DWES/PROYECTOS2425/ANONIMO_ev2_01_examen)
+2025-02-25 20:04:32 [INFO] No active profile set, falling back to 1 default profile: "default"
+2025-02-25 20:04:33 [INFO] Initializing ProtocolHandler ["http-nio-8081"]
+2025-02-25 20:04:33 [INFO] Starting service [Tomcat]
+2025-02-25 20:04:33 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-25 20:04:33 [INFO] Initializing Spring embedded WebApplicationContext
+2025-02-25 20:04:33 [INFO] HikariPool-1 - Starting...
+2025-02-25 20:04:33 [INFO] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12f6035
+2025-02-25 20:04:33 [INFO] HikariPool-1 - Start completed.
+2025-02-25 20:04:34 [WARN] HHH000511: The 5.7.44 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-02-25 20:04:35 [WARN] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-25 20:04:35 [INFO] Starting ProtocolHandler ["http-nio-8081"]
+2025-02-25 20:04:35 [INFO] Started GenericoExamenApplication in 3.034 seconds (process running for 3.7)
+>>>>>>> 03eaf5eca47467f8cb5cdaa8a46f9ec52a535592

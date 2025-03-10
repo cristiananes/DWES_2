@@ -4,6 +4,10 @@
     <entry loc="D:\sts-4.27.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.5.v20241023-1957\jre" stamp="1737160352208"/>
     <entry loc="C:\Program Files\SpringTool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre" stamp="1695624742288"/>
     <entry loc="C:\Program Files\SpringTool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047" stamp="1695624742661"/>
+<<<<<<< HEAD
     <entry loc="D:\sts-4.27.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.5.v20241023-1957" stamp="1737160344270"/>
     <entry loc="C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot" stamp="1713548528630"/>
+=======
+    <entry loc="C:\Program Files\Java\jdk-20" stamp="1695028517226"/>
+>>>>>>> 03eaf5eca47467f8cb5cdaa8a46f9ec52a535592
 </dirs>

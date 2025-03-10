@@ -16,7 +16,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
-//tiene que tener 3 cosas paswordRncoder, AutenticationManager, Servicio de usuarios (UserDetailsService)
+//tiene que tener 3 cosas paswordEncoder, AutenticationManager, Servicio de usuarios (UserDetailsService)
 public class SecurityConfig {
 
 	@Autowired private UserDetailsService userDetailsService;
