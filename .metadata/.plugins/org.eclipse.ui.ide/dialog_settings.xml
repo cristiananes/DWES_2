@@ -39,9 +39,14 @@
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<item value="C:\Users\cristian\Documents\Workspace_2.0\marcosd_ev2_04_weather"/>
 =======
 <<<<<<< HEAD
+			<item value="D:\WorkSpace\DWES_2"/>
+=======
+>>>>>>> af22900bb8343be47239425124421aac181c183c
+=======
 			<item value="D:\WorkSpace\DWES_2"/>
 =======
 >>>>>>> af22900bb8343be47239425124421aac181c183c
