@@ -54,7 +54,7 @@ public class AstronautaService {
 		Sort ordenacion = Sort.by(direction, por);
 		Pageable pageable = PageRequest.of(pagina, TAMANIO_PAGINA, ordenacion);
 		
-=======
+
 	
 	
 	public Page<Astronauta> getPage(int pagina) {
