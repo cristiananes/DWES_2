@@ -5888,3 +5888,329 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.IClasspathEn
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-10 18:51:23.851
 !MESSAGE Boot project ADDED: cristianag47_ev2_06_consumoApi
 >>>>>>> e5ba2a1d85d299121d2fdbfec51a46f7b7e83afb
+!SESSION 2025-03-11 16:26:36.648 -----------------------------------------------
+eclipse.buildId=4.34.0.202411281622
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-11 16:27:01.862
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-11 16:27:11.132
+!MESSAGE Logback config file: D:\WorkSpace\DWES_2\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2025-03-11 16:27:11.368
+!MESSAGE Unable to load resource file:/D:/WorkSpace/DWES_2/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.xml.sax.SAXParseExceptionpublicId: file:/D:/WorkSpace/DWES_2/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; systemId: file:/D:/WorkSpace/DWES_2/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; lineNumber: 2; columnNumber: 2; El marcador en el documento que precede al elemento raíz debe tener el formato correcto.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.getResource(ResourceHandler.java:287)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadResource(ResourceHandler.java:263)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:166)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:368)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:244)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:592)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:570)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: file:/D:/WorkSpace/DWES_2/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; systemId: file:/D:/WorkSpace/DWES_2/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; lineNumber: 2; columnNumber: 2; El marcador en el documento que precede al elemento raíz debe tener el formato correcto.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:862)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:114)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:326)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:260)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 21 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2025-03-11 16:27:11.370
+!MESSAGE The persisted application model has no top-level window. Reinitializing with the default application model.
+!STACK 0
+java.lang.Exception
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:171)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:368)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:244)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:592)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:570)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.ui 2 0 2025-03-11 16:27:11.491
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-11 16:27:11.491
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-11 16:27:11.710
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-11 16:27:11.710
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2025-03-11 16:27:15.847
+!MESSAGE No search provider was registered. Tasks search is not available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-11 16:27:16.853
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cristian'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:27:49.271
+!MESSAGE Classpath changed for project: ANONIMO_ev2_01_examen
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:27:49.272
+!MESSAGE Boot project ADDED: ANONIMO_ev2_01_examen
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:27:49.272
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:27:49.301
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:27:49.321
+!MESSAGE Classpath changed for project: ANONIMO_ev2_01_examen
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-11 16:27:49.345
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+D:\sts-4.27.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.5.v20241023-1957\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=D:/WorkSpace/DWES_2/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1741706869344
+-Dlanguageserver.hover-timeout=225
+-jar
+D:\sts-4.27.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.59.0.202411281450\servers\spring-boot-language-server\spring-boot-language-server-1.59.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:27:49.346
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-11 16:27:49.386
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 5008
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:27:49.787
+!MESSAGE Classpath changed for project: ANONIMO_ev2_01_examen
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:04.548
+!MESSAGE Classpath changed for project: cristianag47_ev2_01_AstronautasAula8
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:04.549
+!MESSAGE Boot project ADDED: cristianag47_ev2_01_AstronautasAula8
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:04.599
+!MESSAGE Classpath changed for project: cristianag47_ev2_01_AstronautasAula8
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:04.694
+!MESSAGE Classpath changed for project: cristianag47_ev2_01_AstronautasAula8
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:38.087
+!MESSAGE Classpath changed for project: cristianag47_ev2_06_consumoApi
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:38.087
+!MESSAGE Boot project ADDED: cristianag47_ev2_06_consumoApi
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:38.280
+!MESSAGE Classpath changed for project: cristianag47_ev2_06_consumoApi
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:38.317
+!MESSAGE Classpath changed for project: cristianag47_ev2_06_consumoApi
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:54.474
+!MESSAGE Classpath changed for project: cristianag47_ev2_04_Monedas
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:54.474
+!MESSAGE Boot project ADDED: cristianag47_ev2_04_Monedas
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:54.623
+!MESSAGE Classpath changed for project: cristianag47_ev2_04_Monedas
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:28:54.654
+!MESSAGE Classpath changed for project: cristianag47_ev2_04_Monedas
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:03.800
+!MESSAGE Classpath changed for project: cristianag47_ev2_05_Tiempo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:03.800
+!MESSAGE Boot project ADDED: cristianag47_ev2_05_Tiempo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:03.964
+!MESSAGE Classpath changed for project: cristianag47_ev2_05_Tiempo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:03.988
+!MESSAGE Classpath changed for project: cristianag47_ev2_05_Tiempo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:13.116
+!MESSAGE Classpath changed for project: cristianag47_ev2_MiAlquiler
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:13.116
+!MESSAGE Boot project ADDED: cristianag47_ev2_MiAlquiler
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:13.263
+!MESSAGE Classpath changed for project: cristianag47_ev2_MiAlquiler
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:13.291
+!MESSAGE Classpath changed for project: cristianag47_ev2_MiAlquiler
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:24.253
+!MESSAGE Classpath changed for project: cristianag47_ev2_Seguridad
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:24.253
+!MESSAGE Boot project ADDED: cristianag47_ev2_Seguridad
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:24.479
+!MESSAGE Classpath changed for project: cristianag47_ev2_Seguridad
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:24.524
+!MESSAGE Classpath changed for project: cristianag47_ev2_Seguridad
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:33.380
+!MESSAGE Classpath changed for project: cristianag47_ev2_03_ordenacion
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:33.380
+!MESSAGE Boot project ADDED: cristianag47_ev2_03_ordenacion
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:33.451
+!MESSAGE Classpath changed for project: cristianag47_ev2_03_ordenacion
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:48.716
+!MESSAGE Classpath changed for project: marcosd_ev2_04_weather
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2025-03-11 16:29:48.719
+!MESSAGE Cannot invoke "org.eclipse.jdt.core.IClasspathEntry.getPath()" because the return value of "org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.getJreContainer(org.eclipse.jdt.core.IClasspathEntry[])" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.IClasspathEntry.getPath()" because the return value of "org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.getJreContainer(org.eclipse.jdt.core.IClasspathEntry[])" is null
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:98)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:48.846
+!MESSAGE Classpath changed for project: marcosd_ev2_04_weather
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:48.847
+!MESSAGE Boot project ADDED: marcosd_ev2_04_weather
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:29:48.985
+!MESSAGE Classpath changed for project: marcosd_ev2_04_weather
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:30:00.687
+!MESSAGE Classpath changed for project: marcosd_ev2_05_firebase
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:30:00.688
+!MESSAGE Boot project ADDED: marcosd_ev2_05_firebase
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:30:00.842
+!MESSAGE Classpath changed for project: marcosd_ev2_05_firebase
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:30:00.872
+!MESSAGE Classpath changed for project: marcosd_ev2_05_firebase
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2025-03-11 16:30:07.998
+!MESSAGE Could not download javadoc for com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.guava:listenablefuture:jar:javadoc:9999.0-empty-to-avoid-conflict-with-guava
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing com.google.guava:listenablefuture:jar:javadoc:9999.0-empty-to-avoid-conflict-with-guava
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2025-03-11 16:30:07.999
+!MESSAGE Could not resolve artifact com.google.guava:listenablefuture:jar:javadoc:9999.0-empty-to-avoid-conflict-with-guava
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2025-03-11 16:30:07.999
+!MESSAGE Missing com.google.guava:listenablefuture:jar:javadoc:9999.0-empty-to-avoid-conflict-with-guava
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:30:42.086
+!MESSAGE Classpath changed for project: marcosd_ev2_02_seguridad
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:30:42.086
+!MESSAGE Boot project ADDED: marcosd_ev2_02_seguridad
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 16:30:42.128
+!MESSAGE Classpath changed for project: marcosd_ev2_02_seguridad
+
+!ENTRY org.eclipse.debug.ui 4 120 2025-03-11 16:31:24.639
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 5; columnNumber: 2; El contenido de los elementos debe constar de marcadores o datos de carácter con un formato correcto.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2589)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2679)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.restoreLaunchHistory(LaunchConfigurationManager.java:497)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.loadLaunchHistories(LaunchConfigurationManager.java:1055)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getLaunchHistory(LaunchConfigurationManager.java:1027)
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.internalGetHistory(AbstractLaunchHistoryAction.java:547)
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.getToolTip(AbstractLaunchHistoryAction.java:238)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
