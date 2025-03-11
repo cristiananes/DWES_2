@@ -22,10 +22,10 @@ public class PersonaService {
 	
     private final DatabaseReference databaseReference;
     //el /persona es como el schema que vamos a usar.
-    private static final String FIREBASE_URL = "https://prueba1-11f3c-default-rtdb.europe-west1.firebasedatabase.app/personas";
+    private static final String FIREBASE_URL = "https://prueba1-11f3c-default-rtdb.europe-west1.firebasedatabase.app/cristianag47/prueba";
     
     public PersonaService(FirebaseDatabase firebaseDatabase) {
-        this.databaseReference = firebaseDatabase.getReference("personas"); // Nombre del nodo en Firebase //esto tiene que hacer match con el esquema de arriba
+        this.databaseReference = firebaseDatabase.getReference("cristianag47/prueba"); // Nombre del nodo en Firebase //esto tiene que hacer match con el esquema de arriba
     }
 
     
@@ -66,7 +66,7 @@ public class PersonaService {
     public Persona obtenerPersonaPorId(String personaId) {
         
     	String url = FIREBASE_URL+"/" + personaId + ".json";
-        System.out.println(url);
+        
         
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(url, Persona.class);

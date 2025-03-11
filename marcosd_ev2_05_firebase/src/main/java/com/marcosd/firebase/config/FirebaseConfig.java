@@ -25,7 +25,7 @@ public class FirebaseConfig {
                 // Construir las opciones de Firebase
                 FirebaseOptions options = FirebaseOptions.builder()
                         .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                        .setDatabaseUrl("https://prueba1-11f3c-default-rtdb.europe-west1.firebasedatabase.app")
+                        .setDatabaseUrl("https://dwes2025-35dcc-default-rtdb.europe-west1.firebasedatabase.app/")
                         .build();
 
                 // Inicializar la aplicación de Firebase
