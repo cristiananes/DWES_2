@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d1d56722-817b-4a04-86d8-54349f3e4ff7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/repository/ContratoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/repository/PagoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/repository/PerfilRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/resources/templates/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/mialquiler/demo/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/mialquiler/demo/entity/Contrato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/mialquiler/demo/entity/Pago.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/mialquiler/demo/entity/Perfil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/mialquiler/demo/entity/Propiedad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/mialquiler/demo/entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/mialquiler/demo/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/mialquiler/demo/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/users/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/users/usersForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANONIMO_ev2_01_examen/logs/miaplicacion.log" beforeDir="false" afterPath="$PROJECT_DIR$/ANONIMO_ev2_01_examen/logs/miaplicacion.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANONIMO_ev2_01_examen/src/main/java/com/generico/astronautas/controladores/AstronautaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANONIMO_ev2_01_examen/src/main/java/com/generico/astronautas/controladores/AstronautaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANONIMO_ev2_01_examen/src/main/java/com/generico/astronautas/servicios/AstronautaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ANONIMO_ev2_01_examen/src/main/java/com/generico/astronautas/servicios/AstronautaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANONIMO_ev2_01_examen/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ANONIMO_ev2_01_examen/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_06_consumoApi/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_06_consumoApi/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/logs/miaplicacion.log" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/logs/miaplicacion.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/Cristianag47Ev2MiAlquilerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/Cristianag47Ev2MiAlquilerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/entity/Contrato.java" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/entity/Contrato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/entity/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/entity/Pago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/entity/Propiedad.java" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/entity/Propiedad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/java/com/example/demo/service/UsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/test/java/com/example/demo/Cristianag47Ev2MiAlquilerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cristianag47_ev2_MiAlquiler/src/test/java/com/example/demo/Cristianag47Ev2MiAlquilerApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2uXaQW8f5vTpPSEAhmh65y47JcH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Unnamed.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/WorkSpace/DWES_2/demo",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.build"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1d56722-817b-4a04-86d8-54349f3e4ff7" name="Changes" comment="" />
+      <created>1742397357504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742397357504</updated>
+    </task>
+    <servers />
+  </component>
+</project>
