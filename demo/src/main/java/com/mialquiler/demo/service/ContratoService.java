@@ -1,13 +1,32 @@
 package com.mialquiler.demo.service;
 
+import com.mialquiler.demo.entity.Contrato;
+import com.mialquiler.demo.repository.ContratoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ContratoService {
 
-    //Crud
+    @Autowired
+    private ContratoRepository contratoRepository;
 
-    //validacion de fechas
+    public List<Contrato> listarTodos() {
+        return contratoRepository.findAll();
+    }
 
-    //asignacion de contratos a propiedades (a traves de PropiedadContrato)
+    public void guardar(Contrato contrato) {
+        contratoRepository.save(contrato);
+    }
+
+    public Optional<Contrato> buscarPorId(Long id) {
+        return contratoRepository.findById(id);
+    }
+
+    public void eliminar(Long id) {
+        contratoRepository.deleteById(id);
+    }
 }

@@ -28,7 +28,8 @@ public class Pago {
 	private boolean estado;
 
 	@ManyToOne
-	private Contrato contrato_pago;
+	@JoinColumn(name = "contrato_id")
+	private Contrato contrato;
 	
 
 	
