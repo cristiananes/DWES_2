@@ -14,6 +14,9 @@ public class ContratoService {
     @Autowired
     private ContratoRepository contratoRepository;
 
+    @Autowired
+    private NotificacionesService notificacionesService;
+
     public List<Contrato> listarTodos() {
         return contratoRepository.findAll();
     }
@@ -28,5 +31,9 @@ public class ContratoService {
 
     public void eliminar(Long id) {
         contratoRepository.deleteById(id);
+    }
+
+    public List<Contrato> contratosPorVencer() {
+        return notificacionesService.getContratosPorVencer();
     }
 }

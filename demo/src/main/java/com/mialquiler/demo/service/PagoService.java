@@ -14,6 +14,9 @@ public class PagoService {
     @Autowired
     private PagoRepository pagoRepository;
 
+    @Autowired
+    private NotificacionesService notificacionesService;
+
     public List<Pago> listarTodos() {
         return pagoRepository.findAll();
     }
@@ -28,6 +31,9 @@ public class PagoService {
 
     public void eliminar(Long id) {
         pagoRepository.deleteById(id);
+    }
+    public List<Pago> pagosAtrasados() {
+        return notificacionesService.getPagosAtrasados();
     }
 }
 

@@ -39,6 +39,9 @@ public class UserService {
         }
     }
 
+    public long contarUsuarios() {
+        return userRepository.count();
+    }
 //actualizacion de usuario
 
 //eliminacion logica del usuario

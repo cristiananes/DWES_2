@@ -9,7 +9,7 @@
   <label>Inquilino:</label>
   <select th:field="*{inquilino}">
     <option th:each="usuario : ${usuarios}"
-            th:if="${usuario.perfil.nombre == 'INQUILINO'}"
+            th:if="${usuario.rol == 'INQUILINO'}"
             th:value="${usuario}"
             th:text="${usuario.username}">
     </option>
