@@ -18,12 +18,15 @@ public class Contrato {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	private LocalDate inicio;
-	private LocalDate fin;
-	private int precio;
+
+	private LocalDate fechaInicio;
+	private LocalDate fechaFin;
+	private double precio;
 	private boolean estado;
-	
+
+	@ManyToOne
+	@JoinColumn(name = "inquilino_username")
+	private Usuario inquilino;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "contrato_propiedad")
 	private List<PropiedadContrato> propiedadContratos;
