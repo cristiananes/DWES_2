@@ -20,7 +20,6 @@ public class UserController {
     @Autowired
     UserService userService;
 
-
     //Obtener lista de todos los usuarios
     @GetMapping("/all")
     public ModelAndView obtenerListaUsuarios(){
@@ -29,7 +28,6 @@ public class UserController {
         return salida;
     }
 
-    
     //Ruta que te lleva al formulario de crear un usuario
     @GetMapping("/crear")
     public ModelAndView crearUsuario(){
@@ -37,22 +35,23 @@ public class UserController {
         salida.addObject("usuario", new Usuario());
         return salida;
     }
+
     //guardar un nuevo usuario
     @PostMapping("/create")
-    public  ModelAndView guardarUsuario(@ModelAttribute Usuario usuario){
-       Boolean guardado = userService.CompraracionUsername(usuario);
+    public ModelAndView guardarUsuario(@ModelAttribute Usuario usuario){
+        // CORREGIDO: Nombre del método
+        Boolean guardado = userService.validarUsername(usuario);
 
-       if (guardado == true){
-           ModelAndView salida = new ModelAndView("users/users");
-           salida.addObject("users", userRepository.findAll());
-           salida.addObject("mensaje", "Usuario guardado correctamente");
-           return salida;
-       }else {
-           ModelAndView salida = new ModelAndView("users/usersForm");
-           salida.addObject("usuario", new Usuario());
-           salida.addObject("mensaje", "Nombre de usuario existente utiliza otro");
-           return salida;
-       }
-
+        if (guardado == true){
+            ModelAndView salida = new ModelAndView("users/users");
+            salida.addObject("users", userRepository.findAll());
+            salida.addObject("mensaje", "Usuario guardado correctamente");
+            return salida;
+        }else {
+            ModelAndView salida = new ModelAndView("users/usersForm");
+            salida.addObject("usuario", new Usuario());
+            salida.addObject("mensaje", "Nombre de usuario existente utiliza otro");
+            return salida;
+        }
     }
 }

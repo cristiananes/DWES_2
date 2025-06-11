@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit; // AGREGADO: Import faltante
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -67,7 +68,8 @@ public class NotificacionesService {
                 pago.getFechaReal() : LocalDate.now();
 
         if (fechaComparacion.isAfter(pago.getFechaPrevista())) {
-            return (int) pago.getFechaPrevista().until(fechaComparacion).getDays();
+            // CORREGIDO: Usar ChronoUnit.DAYS.between en lugar de until()
+            return (int) ChronoUnit.DAYS.between(pago.getFechaPrevista(), fechaComparacion);
         }
         return 0;
     }
