@@ -31,6 +31,7 @@
         <td th:text="${pago.retraso}">0</td>
         <td th:text="${pago.estado ? 'Pagado' : 'Pendiente'}">Estado</td>
         <td>
+            <a th:href="@{'/pagos/editar/' + ${pago.id}}" class="btn btn-primary btn-sm">Editar</a>
             <a th:href="@{'/pagos/eliminar/' + ${pago.id}}">Eliminar</a>
         </td>
     </tr>

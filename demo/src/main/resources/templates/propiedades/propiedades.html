@@ -27,6 +27,7 @@
         <td th:text="${propiedad.estado}"></td>
         <td th:text="${propiedad.duenio.username}"></td>
         <td>
+            <a th:href="@{'/propiedades/editar/' + ${propiedad.id}}" class="btn btn-primary btn-sm">Editar</a>
             <a th:href="@{'/propiedades/eliminar/' + ${propiedad.id}}">Eliminar</a>
         </td>
     </tr>

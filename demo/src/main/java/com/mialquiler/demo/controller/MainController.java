@@ -4,6 +4,7 @@ import com.mialquiler.demo.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -22,8 +23,12 @@ public class MainController {
     private PagoService pagoService;
 
     @GetMapping("/")
-    public ModelAndView dashboard() {
-        ModelAndView mav = new ModelAndView("dashboard");
+    public ModelAndView dashboard(@RequestParam(required = false) String rol) {
+        ModelAndView mav = new ModelAndView("index");
+
+        // Simular usuario logueado (en producción sería desde sesión)
+        String userRole = (rol != null) ? rol : "ADMIN";
+        mav.addObject("userRole", userRole);
 
         // Estadísticas básicas
         mav.addObject("totalUsuarios", userService.contarUsuarios());
@@ -40,6 +45,6 @@ public class MainController {
 
     @GetMapping("/dashboard")
     public ModelAndView dashboardAlternativo() {
-        return dashboard();
+        return dashboard(null);
     }
 }

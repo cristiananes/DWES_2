@@ -34,4 +34,6 @@ public class Contrato {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "contrato")
 	@ToString.Exclude
 	private List<Pago> pagos;
+
+
 }
